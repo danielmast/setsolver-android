@@ -58,6 +58,7 @@ class ImageProcessor {
         image.copyTo(drawn)
         val color = Scalar(220.0, 117.0, 0.0)
 
+        // Debug: Draw connected lines between detected cards
         for (i in cardPositions.indices) {
             val card1 = cardPositions[i]
             val card2 = cardPositions[(i + 1) % cardPositions.size]
